@@ -173,11 +173,13 @@
           var correctAll = numCorrect + data.questionsCorrect;
           var lengthAll = questions.length + data.questionsAll;
           console.log('correctAll: ' + correctAll + 'numCorrect: ' + numCorrect);
+          var people = lenghtAll/5
 
           firebase.database().ref('question').set(
             {
             questionsCorrect: correctAll,
             questionsAll: lengthAll,
+            questionAverage: correctAll/people
             }
           );
         }
