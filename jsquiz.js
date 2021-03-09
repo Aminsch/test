@@ -163,7 +163,7 @@
           numCorrect++;
         }
       }
-      firebase.database().child("question").then( function(snapshot) {
+      firebase.database().child("question").get().then( function(snapshot) {
         if (snapshot.exists()) {
           console.log(snapshot.val());
         }
