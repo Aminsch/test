@@ -159,6 +159,9 @@
           numCorrect++;
         }
       }
+      firebase.database().ref('question'/).set({
+        correctQuestions: numCorrect
+      });
       
       score.append('You got ' + numCorrect + ' questions out of ' +
                    questions.length + ' right!!!');
