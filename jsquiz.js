@@ -176,8 +176,7 @@
           firebase.database().ref('question').set(
             {
             questionsCorrect: correctAll,
-            questionsAll: lengthAll,
-            questionAverage: correctAll/(lenghtAll/5)
+            questionsAll: lengthAll
             }
           );
         }
