@@ -154,6 +154,9 @@
     }
     
     // Computes score and returns a paragraph element to be displayed
+
+    var correctAll = 0;
+    var lengthAll = 0;
     function displayScore() {
       var score = $('<p>',{id: 'question'});
       
@@ -164,16 +167,13 @@
         }
       }
 
-      var correctAll = 0;
-      var lengthAll = 0;
       database.ref("question").get().then( function(snapshot) {
         if (snapshot.exists()) {
           console.log(snapshot.val());
           var data = snapshot.val()
-          console.log("Data:" + data.questionsCorrect);
           var correctAll = numCorrect + data.questionsCorrect;
           var lengthAll = questions.length + data.questionsAll;
-          console.log('correctAll: ' + correctAll);
+          console.log('correctAll: ' + correctAll + 'numCorrect: ' + numCorrect);
         }
         else {
           console.log("No data available");
