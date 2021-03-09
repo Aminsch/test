@@ -178,7 +178,7 @@
             {
             questionsCorrect: correctAll,
             questionsAll: lengthAll,
-            questionAverage: lengthAll/5
+            questionAverage: correctAll/lenghtAll
             }
           );
         }
