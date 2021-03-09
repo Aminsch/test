@@ -1,4 +1,3 @@
-
 (function() {
     /* import firebase from "firebase/app";
     import "firebase/database";
@@ -177,7 +176,7 @@
           firebase.database().ref('question').set(
             {
             questionsCorrect: correctAll,
-            questionsAll: lengthAll,
+            questionsAll: lengthAll
             }
           );
         }
