@@ -178,7 +178,7 @@
             {
             questionsCorrect: correctAll,
             questionsAll: lengthAll,
-            questionAverage: Math.round(lengthAll/correctAll)
+            questionAverage: lengthAll/correctAll
             }
           );
         }
