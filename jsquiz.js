@@ -163,16 +163,14 @@
           numCorrect++;
         }
       }
-      firebase.database().child("question").get().then( function(snapshot) {
+      database().child("question").get().then( function(snapshot) {
         if (snapshot.exists()) {
           console.log(snapshot.val());
         }
         else {
           console.log("No data available");
-        }
-      }).catch(function(error) {
-        console.error(error);
-      });
+        }});
+      
 
 
       firebase.database().ref('question').set(
