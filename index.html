@@ -31,10 +31,6 @@
 <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
 
 <script>
-
-	import firebase from "firebase/app";
-	import firebase from "firebase/database";
-  // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
     apiKey: "AIzaSyDLeOqe14LY6iRcB8cjDTfNY8lbx5M4lhs",
@@ -48,7 +44,9 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  App.initializeApp()
   firebase.analytics();
+  firebase.database();
 	
 </script>
 </html>
