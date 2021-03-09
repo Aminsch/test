@@ -165,7 +165,7 @@
           numCorrect++;
         }
       }
-
+      //Abrufen, addieren und hinzufügen der Statistiken
       database.ref("question").get().then( function(snapshot) {
         if (snapshot.exists()) {
           console.log(snapshot.val());
