@@ -178,7 +178,6 @@
             {
             questionsCorrect: correctAll,
             questionsAll: lengthAll,
-            questionAverage: correctAll/(lenghtAll/5)
             }
           );
         }
