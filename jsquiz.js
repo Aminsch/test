@@ -177,7 +177,7 @@
             {
             questionsCorrect: correctAll,
             questionsAll: lengthAll,
-            questionAverage: correctAll:(lenghtAll:5)
+            questionAverage: correctAll/(lenghtAll/5)
             }
           );
         }
