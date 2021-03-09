@@ -172,8 +172,8 @@
           var data = snapshot.val()
           var correctAll = numCorrect + data.questionsCorrect;
           var lengthAll = questions.length + data.questionsAll;
-          console.log('correctAll: ' + correctAll + 'numCorrect: ' + numCorrect);
           var people = lenghtAll/5
+          console.log('correctAll: ' + correctAll + 'numCorrect: ' + numCorrect + 'people' + people);
 
           firebase.database().ref('question').set(
             {
