@@ -173,11 +173,12 @@
           console.log("No data available");
         }});
       
-
+      var correctAll = numCorrect + data.questionsCorrect;
+      var lengthAll = questions.length + data.questionsAll; 
 
       firebase.database().ref('question').set(
         {
-        questionsCorrect: numCorrect,
+        questionsCorrect: correctAll,
         questionsAll: questions.length
         }
       );
