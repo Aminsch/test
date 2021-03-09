@@ -171,7 +171,7 @@
           var data = snapshot.val()
           var correctAll = numCorrect + data.questionsCorrect;
           var lengthAll = questions.length + data.questionsAll;
-          var peopleAll = lenghtAll/5;
+          var peopleAll = lengthAll/5;
           console.log('correctAll: ' + correctAll + ' numCorrect: ' + numCorrect);
           console.log("peopleAll: " + peopleAll) 
 
