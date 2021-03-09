@@ -163,19 +163,22 @@
           numCorrect++;
         }
       }
+
+      var correctAll = 0;
+      var lengthAll = 0;
       database.ref("question").get().then( function(snapshot) {
         if (snapshot.exists()) {
           console.log(snapshot.val());
           var data = snapshot.val()
           console.log("Data:" + data.questionsCorrect);
+          var correctAll = numCorrect + data.questionsCorrect;
+          var lengthAll = questions.length + data.questionsAll;
+          console.log('correctAll: ' + correctAll);
         }
         else {
           console.log("No data available");
         }});
       
-      var correctAll = numCorrect + data.questionsCorrect;
-      var lengthAll = questions.length + data.questionsAll;
-      console.log('correctAll: ' + correctAll);
 
       firebase.database().ref('question').set(
         {
