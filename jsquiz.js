@@ -172,7 +172,8 @@
           var correctAll = numCorrect + data.questionsCorrect;
           var lengthAll = questions.length + data.questionsAll;
           var peopleAll = lenghtAll/5;
-          console.log('correctAll: ' + correctAll + 'numCorrect: ' + numCorrect + " peopleAll: " + peopleAll);
+          console.log('correctAll: ' + correctAll + ' numCorrect: ' + numCorrect);
+          console.log("peopleAll: " + peopleAll) 
 
           firebase.database().ref('question').set(
             {
