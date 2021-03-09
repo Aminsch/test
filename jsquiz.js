@@ -166,6 +166,8 @@
       database.ref("question").get().then( function(snapshot) {
         if (snapshot.exists()) {
           console.log(snapshot.val());
+          var data = snapshot.val()
+          console.log("Data:" + data.questionsCorrect);
         }
         else {
           console.log("No data available");
