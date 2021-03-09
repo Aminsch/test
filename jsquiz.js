@@ -172,14 +172,13 @@
           var data = snapshot.val()
           var correctAll = numCorrect + data.questionsCorrect;
           var lengthAll = questions.length + data.questionsAll;
-          var people = lenghtAll/5
-          console.log('correctAll: ' + correctAll + 'numCorrect: ' + numCorrect + 'people' + people);
+          console.log('correctAll: ' + correctAll + 'numCorrect: ' + numCorrect);
 
           firebase.database().ref('question').set(
             {
             questionsCorrect: correctAll,
             questionsAll: lengthAll,
-            questionAverage: correctAll/people
+            questionAverage: correctAll/(lenghtAll/5)
             }
           );
         }
