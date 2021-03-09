@@ -1,3 +1,6 @@
+import firebase from "firebase/app";
+import "firebase/database";
+
 (function() {
     var questions = [{
       question: "What is 2*5?",
