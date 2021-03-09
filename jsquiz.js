@@ -163,7 +163,7 @@
           numCorrect++;
         }
       }
-      database().child("question").get().then( function(snapshot) {
+      database.child("question").get().then( function(snapshot) {
         if (snapshot.exists()) {
           console.log(snapshot.val());
         }
