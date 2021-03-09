@@ -159,7 +159,7 @@
           numCorrect++;
         }
       }
-      firebase.database().ref('question'/).set({
+      firebase.database().ref('question').set({
         correctQuestions: numCorrect
       });
       
