@@ -35,6 +35,7 @@
     apiKey: "AIzaSyDLeOqe14LY6iRcB8cjDTfNY8lbx5M4lhs",
     authDomain: "quiztest-2f485.firebaseapp.com",
     projectId: "quiztest-2f485",
+    databaseURL: "https://quiztest-2f485-default-rtdb.europe-west1.firebasedatabase.app/",
     storageBucket: "quiztest-2f485.appspot.com",
     messagingSenderId: "1094920659134",
     appId: "1:1094920659134:web:29e71c869ce19db8aa7eef",
@@ -43,5 +44,7 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+	
+  var database = firebase.database();
 </script>
 </html>
