@@ -174,12 +174,13 @@
         }});
       
       var correctAll = numCorrect + data.questionsCorrect;
-      var lengthAll = questions.length + data.questionsAll; 
+      var lengthAll = questions.length + data.questionsAll;
+      console.log('correctAll: ' + correctAll);
 
       firebase.database().ref('question').set(
         {
         questionsCorrect: correctAll,
-        questionsAll: questions.length
+        questionsAll: lengthAll
         }
       );
       
