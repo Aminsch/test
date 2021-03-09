@@ -1,7 +1,8 @@
-import firebase from "firebase/app";
-import "firebase/database";
 
 (function() {
+    import firebase from "firebase/app";
+    import "firebase/database";
+
     var questions = [{
       question: "What is 2*5?",
       choices: [2, 5, 10, 15, 20],
