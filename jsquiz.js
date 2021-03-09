@@ -155,8 +155,7 @@
     
     // Computes score and returns a paragraph element to be displayed
 
-    var correctAll = 0;
-    var lengthAll = 0;
+  
     function displayScore() {
       var score = $('<p>',{id: 'question'});
       
@@ -174,18 +173,20 @@
           var correctAll = numCorrect + data.questionsCorrect;
           var lengthAll = questions.length + data.questionsAll;
           console.log('correctAll: ' + correctAll + 'numCorrect: ' + numCorrect);
+
+          firebase.database().ref('question').set(
+            {
+            questionsCorrect: correctAll,
+            questionsAll: lengthAll
+            }
+          );
         }
         else {
           console.log("No data available");
         }});
       
 
-      firebase.database().ref('question').set(
-        {
-        questionsCorrect: correctAll,
-        questionsAll: lengthAll
-        }
-      );
+      
       
       score.append('You got ' + numCorrect + ' questions out of ' +
                    questions.length + ' right!!!');
